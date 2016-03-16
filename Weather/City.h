@@ -15,7 +15,8 @@
 @property CGFloat precipitation;
 @property CGFloat currentTemp;
 @property CGFloat humidity;
-@property NSString *weatherPic; 
+@property NSString *weatherPic;
+
 
 
 -(instancetype) initWithName:(NSString *)name andTemperature:(CGFloat )temperature andPrecipitation:(CGFloat)precipitaton andcurrentTemp:(CGFloat)currentTemp andHumidity:(CGFloat)humidity andWeatherPic:(NSString *)weatherPic;

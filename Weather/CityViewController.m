@@ -27,17 +27,20 @@
 
     self.view.backgroundColor = [UIColor purpleColor]; 
     
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectZero];
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(160, 160, 500, 500)];
     [self.view addSubview:label]; 
     label.text = [@(self.city.temperature) stringValue];
     label.textColor = [UIColor whiteColor];
-    label.frame = CGRectMake(200, 200, 700, 700);
+    //label.frame = CGRectMake(170, 160, 500, 500);
+    [label setFont:[UIFont systemFontOfSize:100]];
+    label.text = [NSString stringWithFormat:@"%@°",[@(self.city.temperature) stringValue]];
     [label sizeToFit];
+    
+    
     
     UIButton *moreDetails = [[UIButton alloc] initWithFrame:CGRectMake(200, 550, 300, 150)];
     [moreDetails setTitle:@"More Details" forState:UIControlStateNormal];
     [moreDetails addTarget:self action:@selector(showWeatherDetails:) forControlEvents:UIControlEventTouchUpInside];
-    
     
     
     UIImage *image = [UIImage imageNamed:self.city.weatherPic];
@@ -46,20 +49,13 @@
     [self.view addSubview:imageView];
     
     
-//    UIImage *weatherPic = [[UIImage alloc] init];
-//    [self.view addSubview:weatherPic];
-//    weatherPic.imageAsset = 
-//    weatherPic  = UIImage (frame:CGRectMake(10, 50, 100, 300));
-//    weatherPic.image = UIImage(named:"image.jpg")
-//    self.view.addSubview(imageView)
-//    
     [self.view addSubview:moreDetails];
     
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 -(IBAction)showWeatherDetails:(id)sender

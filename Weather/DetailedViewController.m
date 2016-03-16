@@ -29,14 +29,13 @@
     labelDetailsPrecip.textColor = [UIColor whiteColor];
     labelDetailsPrecip.frame = CGRectMake(50, 100, 300, 150);
     [labelDetailsPrecip sizeToFit];
-
     
     [self.view addSubview:labelDetailsPrecip];
 
     
     UILabel *labelDetailsTemp = [[UILabel alloc]initWithFrame:CGRectZero];
     [self.view addSubview:labelDetailsTemp];
-    NSString *tempString = [NSString stringWithFormat:@"Current Temperature (Celcius): %.0f", self.city.currentTemp];
+    NSString *tempString = [NSString stringWithFormat:@"Current Temperature (Celcius): %.0f°", self.city.currentTemp];
     labelDetailsTemp.text = tempString;
     labelDetailsTemp.textColor = [UIColor whiteColor];
     labelDetailsTemp.frame = CGRectMake(50, 200, 300, 150);
